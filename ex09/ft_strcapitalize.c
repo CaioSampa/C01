@@ -10,27 +10,27 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
-
 char	*ft_strcapitalize(char *str)
 {
-	int	initial_letter;
+	int		initial_letter;
 	char	*ptr_str;
 
 	ptr_str = str;
 	initial_letter = 1;
 	while (*ptr_str)
 	{
-		if ((*ptr_str >= 65 && *ptr_str <= 90) || (*ptr_str >= 97 && *ptr_str <= 122) || (*ptr_str >= 48 && *ptr_str <= 57))
+		if ((*ptr_str >= 65 && *ptr_str <= 90)
+			|| (*ptr_str >= 97 && *ptr_str <= 122)
+			|| (*ptr_str >= 48 && *ptr_str <= 57))
 		{
-			if(!initial_letter && (*ptr_str >= 65 && *str <= 90) && !(*ptr_str >= 97 && *ptr_str <= 122))
+			if (!initial_letter && (*ptr_str >= 65 && *str <= 90)
+				&& !(*ptr_str >= 97 && *ptr_str <= 122))
 				*ptr_str += 32;
-			
-			if (initial_letter && (*ptr_str >= 97 && *ptr_str <= 122)) 
+			if (initial_letter && (*ptr_str >= 97 && *ptr_str <= 122))
 				*ptr_str -= 32;
-			
 			initial_letter = 0;
-		} else
+		}
+		else
 			initial_letter = 1;
 		ptr_str++;
 	}

@@ -28,8 +28,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 		ptr_dest++;
 		ptr_src++;
 		i++;
-		if (*ptr_src == '\0' && i < n)
-			*ptr_dest = '\0';
+	}
+	while (i < n)
+	{
+		*ptr_dest = '\0';
+		ptr_dest++;
+		i++;
 	}
 	return (dest);
 }
