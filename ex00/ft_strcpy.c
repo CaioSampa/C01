@@ -6,7 +6,7 @@
 /*   By: casampai <casampai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 13:01:33 by casampai          #+#    #+#             */
-/*   Updated: 2026/04/14 13:40:13 by casampai         ###   ########.fr       */
+/*   Updated: 2026/04/18 15:17:41 by casampai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,6 @@ char	*ft_strcpy(char *dest, char *src)
 		ptr_src++;
 		ptr_dest++;
 	}
+	*ptr_dest = '\0';
 	return (dest);
 }

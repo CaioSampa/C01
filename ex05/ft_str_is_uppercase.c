@@ -6,7 +6,7 @@
 /*   By: casampai <casampai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:54:16 by casampai          #+#    #+#             */
-/*   Updated: 2026/04/14 18:01:13 by casampai         ###   ########.fr       */
+/*   Updated: 2026/04/18 15:48:23 by casampai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@ int	ft_str_is_uppercase(char *str)
 	int	type_return;
 
 	type_return = 0;
+	if (!*str)
+		return (1);
 	while (*str)
 	{
 		if ((*str >= 65 && *str <= 90))
