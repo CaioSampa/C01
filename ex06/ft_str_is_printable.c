@@ -6,7 +6,7 @@
 /*   By: casampai <casampai@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/14 17:55:49 by casampai          #+#    #+#             */
-/*   Updated: 2026/04/18 15:48:53 by casampai         ###   ########.fr       */
+/*   Updated: 2026/04/21 18:03:11 by casampai         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,9 +16,9 @@ int	ft_str_is_printable(char *str)
 		return (1);
 	while (*str)
 	{
-		if ((*str >= 32 && *str <= 126))
-			return (1);
+		if (!(*str >= 32 && *str <= 126))
+			return (0);
 		str++;
 	}
-	return (0);
+	return (1);
 }
